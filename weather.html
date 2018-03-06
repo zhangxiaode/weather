@@ -1,0 +1,384 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<meta name="keywords" content="张孝德" />
+	<meta name="description" content="张孝德天气插件" />
+	<title>金风凝香天气</title>
+	<link rel="icon" href="./images/favicon.png" mce_href="./images/favicon.png" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="./css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="./css/weather.css" />
+	<script src="./js/jquery-3.1.1.min.js"></script>
+	<script src="./js/weather.js"></script>
+</head>
+<body>
+	<div class="weather">
+        <div class="wPlace">
+            <span>中国</span>&gt;<span>浙江</span>&gt;<span>杭州</span>
+        </div> 
+        <div class="wContainer">
+            <div class="wBody">
+                <a href="javascript:;" class="wBox wToday">
+                    <p class="wDateTime">02月21日 周二 农历正月廿五</p>
+                    <p class="wAir">实时空气质量:<em><b>65</b> 良</em></p>
+                    <div class="wCurrent">
+                        <div class="wStatus"></div>
+                        <div class="wCurTemp">
+                            <span class="big">9</span>
+                            <span class="small">
+                                <em>℃</em>
+                                <em>多云(实时)7 ~ 11℃</em>
+                            </span>
+                        </div>
+                    </div>
+                    <p class="wTemp">7 ~ 11℃</p>
+                    <p class="wWeath">阴转小雨</p>
+                    <p class="wWind">东风3-4级</p>
+                </a>
+                <a href="javascript:;" class="wBox">
+                    <div class="wSplit"></div>
+                    <p class="wWeek">周三</p>
+                    <p class="wDate">02月22日</p>
+                    <div class="wStatus"></div>
+                    <p class="wTemp">7 ~ 11℃</p>
+                    <p class="wWeath">阴转小雨</p>
+                    <p class="wWind">东风3-4级</p>
+                </a>
+                <a href="javascript:;" class="wBox">
+                    <div class="wSplit"></div>
+                    <p class="wWeek">周四</p>
+                    <p class="wDate">02月23日</p>
+                    <div class="wStatus"></div>
+                    <p class="wTemp">7 ~ 11℃</p>
+                    <p class="wWeath">阴转小雨</p>
+                    <p class="wWind">东风3-4级</p>
+                </a>
+                <a href="javascript:;" class="wBox">
+                    <div class="wSplit"></div>
+                    <p class="wWeek">周五</p>
+                    <p class="wDate">02月24日</p>
+                    <div class="wStatus"></div>
+                    <p class="wTemp">7 ~ 11℃</p>
+                    <p class="wWeath">阴转小雨</p>
+                    <p class="wWind">东风3-4级</p>
+                </a>
+                <a href="javascript:;" class="wBox">
+                    <div class="wSplit"></div>
+                    <p class="wWeek">周六</p>
+                    <p class="wDate">02月25日</p>
+                    <div class="wStatus"></div>
+                    <p class="wTemp">7 ~ 11℃</p>
+                    <p class="wWeath">阴转小雨</p>
+                    <p class="wWind">东风3-4级</p>
+                </a>
+            </div>
+            <div class="wTab">
+                <div class="wTabBd">
+                    <div class="wTabBdBox temperature selected">
+                        <div class="canvasY">
+                            <ul>
+                                <li>25</li>
+                                <li>20</li>
+                                <li>15</li>
+                                <li>10</li>
+                                <li>5</li>
+                            </ul>
+                        </div>
+                        <div class="canvasChart">
+                            <canvas id="temperatureChartBg" width="480" height="86"></canvas>
+                            <div class="tempChartBox tcb1">
+                                <div class="circle"></div>
+                                <div class="txt">13℃</div>
+                            </div>
+                            <div class="tempChartBox tcb2">
+                                <div class="circle"></div>
+                                <div class="txt">14℃</div>
+                            </div>
+                            <div class="tempChartBox tcb3">
+                                <div class="circle"></div>
+                                <div class="txt">12℃</div>
+                            </div>
+                            <div class="tempChartBox tcb4">
+                                <div class="circle"></div>
+                                <div class="txt">10℃</div>
+                            </div>
+                            <div class="tempChartBox tcb5">
+                                <div class="circle"></div>
+                                <div class="txt">10℃</div>
+                            </div>
+                            <div class="tempChartBox tcb6">
+                                <div class="circle"></div>
+                                <div class="txt">11℃</div>
+                            </div>
+                            <div class="tempChartBox tcb7">
+                                <div class="circle"></div>
+                                <div class="txt">11℃</div>
+                            </div>
+                            <div class="tempChartBox tcb8">
+                                <div class="circle"></div>
+                                <div class="txt">15℃</div>
+                            </div>
+                            <div class="tempChartBox tcb9">
+                                <div class="circle"></div>
+                                <div class="txt">13℃</div>
+                            </div>
+                        </div>
+                        <div class="canvasX">
+                            <ul>
+                                <li>现在</li>
+                                <li>11点</li>
+                                <li>14点</li>
+                                <li>17点</li>
+                                <li>20点</li>
+                                <li>23点</li>
+                                <li>2点</li>
+                                <li>5点</li>
+                                <li>8点</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="wTabBdBox windy">
+                    	<div class="canvasY">
+                    		<ul>
+                    			<li>8</li>
+                    			<li>6</li>
+                    			<li>4</li>
+                    			<li>2</li>
+                    			<li>0</li>
+                    		</ul>
+                    	</div>
+                    	<div class="canvasChart">
+                    		<canvas id="windyChartBg" width="480" height="86"></canvas>
+                    		<div class="tempChartBox">
+                    			<div class="wcbIcon wcbIcon1"></div>
+                    			<div class="wcbDialog">
+                    				<span class="arrow"></span>
+                    				<div class="cont">
+                    					<p>风向：北风</p>
+                    					<p>风力：2级</p>
+                    				</div>
+                    			</div>
+                    		</div>
+                    		<div class="tempChartBox">
+                    			<div class="wcbIcon wcbIcon2"></div>
+                    			<div class="wcbDialog">
+                    				<span class="arrow"></span>
+                    				<div class="cont">
+	                    				<p>风向：北风</p>
+	                    				<p>风力：2级</p>
+	                    			</div>
+                    			</div>
+                    		</div>
+                    		<div class="tempChartBox">
+                    			<div class="wcbIcon wcbIcon3"></div>
+                    			<div class="wcbDialog">
+                    				<span class="arrow"></span>
+                    				<div class="cont">
+	                    				<p>风向：北风</p>
+	                    				<p>风力：2级</p>
+                    				</div>
+                    			</div>
+                    		</div>
+                    		<div class="tempChartBox">
+                    			<div class="wcbIcon wcbIcon4 wcbIcon5"></div>
+                    			<div class="wcbDialog">
+                    				<span class="arrow"></span>
+                    				<div class="cont">
+	                    				<p>风向：北风</p>
+	                    				<p>风力：2级</p>
+                    				</div>
+                    			</div>
+                    		</div>
+                    		<div class="tempChartBox">
+                    			<div class="wcbIcon wcbIcon5"></div>
+                    			<div class="wcbDialog">
+                    				<span class="arrow"></span>
+                    				<div class="cont">
+	                    				<p>风向：北风</p>
+	                    				<p>风力：2级</p>
+                    				</div>
+                    			</div>
+                    		</div>
+                    		<div class="tempChartBox">
+                    			<div class="wcbIcon wcbIcon6"></div>
+                    			<div class="wcbDialog">
+                    				<span class="arrow"></span>
+                    				<div class="cont">
+	                    				<p>风向：北风</p>
+	                    				<p>风力：2级</p>
+	                    			</div>
+                    			</div>
+                    		</div>
+                    		<div class="tempChartBox">
+                    			<div class="wcbIcon wcbIcon7"></div>
+                    			<div class="wcbDialog">
+                    				<span class="arrow"></span>
+                    				<div class="cont">
+	                    				<p>风向：北风</p>
+	                    				<p>风力：2级</p>
+                    				</div>
+                    			</div>
+                    		</div>
+                    		<div class="tempChartBox">
+                    			<div class="wcbIcon wcbIcon8"></div>
+                    			<div class="wcbDialog">
+                    				<span class="arrow"></span>
+                    				<div class="cont">
+	                    				<p>风向：北风</p>
+	                    				<p>风力：2级</p>
+	                    			</div>
+                    			</div>
+                    		</div>
+                    		<div class="tempChartBox">
+                    			<div class="wcbIcon wcbIcon9"></div>
+                    			<div class="wcbDialog">
+                    				<span class="arrow"></span>
+                    				<div class="cont">
+	                    				<p>风向：北风</p>
+	                    				<p>风力：2级</p>
+	                    			</div>
+                    			</div>
+                    		</div>
+                    	</div>
+                    	<div class="canvasX">
+                    		<ul>
+                    			<li>现在</li>
+                    			<li>11点</li>
+                    			<li>14点</li>
+                    			<li>17点</li>
+                    			<li>20点</li>
+                    			<li>23点</li>
+                    			<li>2点</li>
+                    			<li>5点</li>
+                    			<li>8点</li>
+                    		</ul>
+                    	</div>
+                    </div>
+                    <div class="wTabBdBox precipitation">
+                    	<ul>
+                    		<li>
+                    			<span class="wTime">现在</span>
+                    			<span class="water water0"></span>
+                    			<span class="depth">0mm</span>
+                    		</li>
+                    		<li>
+                    			<span class="wTime">11点</span>
+                    			<span class="water water1"></span>
+                    			<span class="depth">0.6mm</span>
+                    		</li>
+                    		<li>
+                    			<span class="wTime">14点</span>
+                    			<span class="water water4"></span>
+                    			<span class="depth">3.4mm</span>
+                    		</li>
+                    		<li>
+                    			<span class="wTime">17点</span>
+                    			<span class="water water2"></span>
+                    			<span class="depth">2mm</span>
+                    		</li>
+                    		<li>
+                    			<span class="wTime">20点</span>
+                    			<span class="water water0"></span>
+                    			<span class="depth">0mm</span>
+                    		</li>
+                    		<li>
+                    			<span class="wTime">23点</span>
+                    			<span class="water water3"></span>
+                    			<span class="depth">2.3mm</span>
+                    		</li>
+                    		<li>
+                    			<span class="wTime">02点</span>
+                    			<span class="water water3"></span>
+                    			<span class="depth">2.3mm</span>
+                    		</li>
+                    		<li>
+                    			<span class="wTime">05点</span>
+                    			<span class="water water3"></span>
+                    			<span class="depth">2.3mm</span>
+                    		</li>
+                    		<li>
+                    			<span class="wTime">08点</span>
+                    			<span class="water water3"></span>
+                    			<span class="depth">2.3mm</span>
+                    		</li>
+                    	</ul>
+                    </div>
+                    <div class="wTabBdBox correlation">
+                        <ul>
+                            <li>
+                                <div class="exhi">穿衣：较冷</div>
+                                <div class="correlationDialog">
+                                    <span class="arrow"></span>
+                                    <div class="cdCont">
+                                        <span>穿衣指数：较冷</span>
+                                        <p>建议着厚外套加毛衣等服装。年老体弱者宜着大衣、呢外套加羊毛衫。</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="exhi">洗车：不宜</div>
+                                <div class="correlationDialog">
+                                    <span class="arrow"></span>
+                                    <div class="cdCont">
+                                        <span>洗车指数：不宜</span>
+                                        <p>不宜洗车，未来24小时内有雨，如果在此期间洗车，雨水和路上的泥水可能会再次弄脏您的爱车。</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="exhi">旅游：适宜</div>
+                                <div class="correlationDialog">
+                                    <span class="arrow"></span>
+                                    <div class="cdCont">
+                                        <span>旅游指数：适宜</span>
+                                        <p>天气较好，风稍大，但温度适宜，总体来说还是好天气。这样的天气适宜旅游，您可以尽情享受大自然的风光。</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="exhi">感冒：极易发</div>
+                                <div class="correlationDialog">
+                                    <span class="arrow"></span>
+                                    <div class="cdCont">
+                                        <span>感冒指数：极易发</span>
+                                        <p>将有一次强降温过程，极易发生感冒，请特别注意增加衣服保暖防寒。</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="exhi">运动：较适宜</div>
+                                <div class="correlationDialog">
+                                    <span class="arrow"></span>
+                                    <div class="cdCont">
+                                        <span>运动指数：较适宜</span>
+                                        <p>阴天，较适宜进行各种户内外运动。</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="exhi">紫外线强度：最弱</div>
+                                <div class="correlationDialog">
+                                    <span class="arrow"></span>
+                                    <div class="cdCont">
+                                        <span>紫外线强度指数：最弱</span>
+                                        <p>属弱紫外线辐射天气，无需特别防护。若长期在户外，建议涂擦SPF在8-12之间的防晒护肤品。</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="wTabHd">
+                    <ul>
+                        <li class="selected"><a href="javascript:;">24小时温度</a></li>
+                        <li><a href="javascript:;">风力风向</a></li>
+                        <li><a href="javascript:;">降水量</a></li>
+                        <li><a href="javascript:;">相关指数</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>  
+    </div>
+</body>
+</html>
+

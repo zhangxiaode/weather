@@ -1,0 +1,83 @@
+{
+    "error": 0, 
+    "status": "success", 
+    "date": "2016-03-05", 
+    "results": [
+        {
+            "currentCity": "杭州", 
+            "pm25": "144", 
+            "index": [
+                {
+                    "title": "穿衣", 
+                    "zs": "较冷", 
+                    "tipt": "穿衣指数", 
+                    "des": "建议着厚外套加毛衣等服装。年老体弱者宜着大衣、呢外套加羊毛衫。"
+                }, 
+                {
+                    "title": "洗车", 
+                    "zs": "不宜", 
+                    "tipt": "洗车指数", 
+                    "des": "不宜洗车，未来24小时内有扬沙或浮尘，如果在此期间洗车，极易很快蒙上新的灰尘。"
+                }, 
+                {
+                    "title": "旅游", 
+                    "zs": "一般", 
+                    "tipt": "旅游指数", 
+                    "des": "风稍大，扬沙或浮尘天气对能见度和空气质量都会有些影响，出行请注意交通安全和采取适当的防尘措施。"
+                }, 
+                {
+                    "title": "感冒", 
+                    "zs": "易发", 
+                    "tipt": "感冒指数", 
+                    "des": "昼夜温差大，风力较强，易发生感冒，请注意适当增减衣服，加强自我防护避免感冒。"
+                }, 
+                {
+                    "title": "运动", 
+                    "zs": "较不宜", 
+                    "tipt": "运动指数", 
+                    "des": "有扬沙或浮尘，建议适当停止户外运动，选择在室内进行运动，以避免吸入更多沙尘，有损健康。"
+                }, 
+                {
+                    "title": "紫外线强度", 
+                    "zs": "最弱", 
+                    "tipt": "紫外线强度指数", 
+                    "des": "属弱紫外线辐射天气，无需特别防护。若长期在户外，建议涂擦SPF在8-12之间的防晒护肤品。"
+                }
+            ], 
+            "weather_data": [
+                {
+                    "date": "周六 03月05日 (实时：12℃)", 
+                    "dayPictureUrl": "http://api.map.baidu.com/images/weather/day/fuchen.png", 
+                    "nightPictureUrl": "http://api.map.baidu.com/images/weather/night/qing.png", 
+                    "weather": "浮尘转晴", 
+                    "wind": "北风4-5级", 
+                    "temperature": "12 ~ -1℃"
+                }, 
+                {
+                    "date": "周日", 
+                    "dayPictureUrl": "http://api.map.baidu.com/images/weather/day/duoyun.png", 
+                    "nightPictureUrl": "http://api.map.baidu.com/images/weather/night/duoyun.png", 
+                    "weather": "多云", 
+                    "wind": "微风", 
+                    "temperature": "10 ~ -3℃"
+                }, 
+                {
+                    "date": "周一", 
+                    "dayPictureUrl": "http://api.map.baidu.com/images/weather/day/duoyun.png", 
+                    "nightPictureUrl": "http://api.map.baidu.com/images/weather/night/yin.png", 
+                    "weather": "多云转阴", 
+                    "wind": "微风", 
+                    "temperature": "13 ~ 2℃"
+                }, 
+                {
+                    "date": "周二", 
+                    "dayPictureUrl": "http://api.map.baidu.com/images/weather/day/yin.png", 
+                    "nightPictureUrl": "http://api.map.baidu.com/images/weather/night/duoyun.png", 
+                    "weather": "阴转多云", 
+                    "wind": "北风3-4级", 
+                    "temperature": "6 ~ -1℃"
+                }
+            ]
+        }
+    ]
+}
